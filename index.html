@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eaf5ff">
+  <meta name="description" content="PAVAN Cute Question - a little quiz made with love.">
+  <title>PAVAN CUTE QUESTION 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="decoration decoration-one">☁️</div>
+  <div class="decoration decoration-two">⭐</div>
+  <div class="decoration decoration-three">🧸</div>
+  <div class="decoration decoration-four">💙</div>
+
+  <header class="topbar">
+    <div class="brand">💙 PAVAN CUTE QUESTION</div>
+    <button id="ownerTab" class="owner-button">🔐 Owner</button>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="sticker-row">
+        <span>🧸</span><span>💙</span><span>🌷</span>
+      </div>
+      <p class="eyebrow">A LITTLE GAME MADE WITH LOVE</p>
+      <h1>PAVAN CUTE QUESTION</h1>
+      <p class="subtitle">Let's see how well we know each other! ♡</p>
+      <div class="hero-tags">
+        <span>☁️ Sweet moments</span>
+        <span>💌 Cute questions</span>
+        <span>✨ Happy memories</span>
+      </div>
+    </section>
+
+    <section id="partnerPage" class="panel">
+
+      <div class="welcome-card">
+        <div>
+          <span class="tiny-label">HELLO CUTIE!</span>
+          <h2>Ready for a little challenge? 💙</h2>
+          <p>Answer honestly and enjoy every question.</p>
+        </div>
+        <div class="welcome-sticker">🐻‍❄️</div>
+      </div>
+
+      <div class="quiz-progress">
+        <div class="progress-info">
+          <span id="progressText">Question 1</span>
+          <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <div id="partnerQuestions"></div>
+
+      <div class="quiz-navigation">
+        <button id="previousBtn" class="light-button" disabled>← Back</button>
+        <button id="nextBtn" class="primary-button">Next Question →</button>
+        <button id="submitBtn" class="primary-button hidden">Finish Quiz 💌</button>
+      </div>
+
+      <div id="partnerResult" class="result hidden" aria-live="polite"></div>
+    </section>
+
+    <section id="ownerPage" class="panel hidden">
+
+      <div class="owner-heading">
+        <span>👑</span>
+        <div>
+          <h2>Owner Dashboard</h2>
+          <p>Your little question studio 💙</p>
+        </div>
+      </div>
+
+      <div class="owner-toolbar">
+        <button id="addQuestionBtn" class="secondary-button">＋ Add Question</button>
+        <button id="saveQuizBtn" class="primary-button">💾 Save Questions</button>
+        <button id="logoutBtn" class="light-button">Logout</button>
+      </div>
+
+      <div id="ownerQuestions"></div>
+
+      <div class="settings-box">
+        <h3>🔑 Change Owner Password</h3>
+        <input id="newPassword" type="password" placeholder="Enter new password">
+        <button id="changePasswordBtn" class="secondary-button">Update Password</button>
+        <p class="small-note">Password is saved in this browser only.</p>
+      </div>
+
+      <div class="settings-box">
+        <h3>📊 Latest Quiz Result</h3>
+        <div id="ownerResult">No result yet.</div>
+        <button id="clearResultBtn" class="light-button">Clear Result</button>
+      </div>
+
+    </section>
+
+    <footer>
+      <div class="footer-stickers">☁️ 💙 🧸 ⭐ 🌷</div>
+      <p>Made with love and little smiles ♡</p>
+      <p class="footer-brand">PAVAN CUTE QUESTION</p>
+    </footer>
+
+  </main>
+
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-sticker">🔐</div>
+      <h2>Owner Login</h2>
+      <p>Only the owner can enter here.</p>
+      <form id="loginForm">
+        <input id="loginPassword" type="password" placeholder="Enter password" required>
+        <p id="loginError" class="error-message"></p>
+        <button class="primary-button full-button" type="submit">Unlock 💙</button>
+        <button id="cancelLoginBtn" class="light-button full-button" type="button">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="celebrationLayer" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
